@@ -1,0 +1,11 @@
+framework module CoverySDK {
+  umbrella header "CoverySDK.h"
+  export *
+
+  module * { export * }
+}
+
+module CoverySDK.Swift {
+  header "CoverySDK-Swift.h"
+  requires objc
+}

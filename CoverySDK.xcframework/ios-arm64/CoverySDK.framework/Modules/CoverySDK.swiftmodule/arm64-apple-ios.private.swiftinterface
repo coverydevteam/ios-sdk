@@ -1,0 +1,213 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.2 effective-5.10 (swiftlang-6.2.0.19.9 clang-1700.3.19.1)
+// swift-module-flags: -target arm64-apple-ios15.5 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature AccessLevelOnImport -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name CoverySDK
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2
+import AVFoundation
+import Accelerate
+import AdSupport
+import AppTrackingTransparency
+import Combine
+import CoreBluetooth
+import CoreGraphics
+import CoreImage
+import CoreLocation
+import CoreNFC
+import CoreText
+import CoreVideo
+@_exported import CoverySDK
+import DeveloperToolsSupport
+import Foundation
+import ImageIO
+import MetalKit
+import MetalPerformanceShaders
+import Network
+import OSLog
+import ObjectiveC
+import QuartzCore
+import Swift
+import SwiftUI
+import TensorFlowLite
+import UIKit
+import VideoToolbox
+import Vision
+import WebKit
+import _Concurrency
+import _CoreNFC_UIKit
+import _StringProcessing
+import _SwiftConcurrencyShims
+import libxml2
+import ObjectiveC.runtime
+extension CoverySDK.SDKCovery {
+  @_hasMissingDesignatedInitializers final public class DataCollection {
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func sendDeviceData(completion: @escaping (Swift.Result<[Swift.String : Any], CoverySDK.SDKError>) -> Swift.Void)
+    #endif
+    @objc deinit
+  }
+}
+
+public enum SDKError : Swift.Error {
+  case isntInitialized
+  case cameraPermission
+  case videoSessionCreation
+  case notEnoughDiskSpace
+  case authorizationError
+  case incorrectResponse
+  case incorrectDocumentId
+  case internalSDKError
+  case networkError
+  case internetConnectionError
+  public static func == (a: CoverySDK.SDKError, b: CoverySDK.SDKError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension CoverySDK.SDKError : Foundation.LocalizedError {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var errorDescription: Swift.String? {
+    get
+  }
+  #endif
+}
+
+public typealias CoveryServerCompletion = (Swift.Result<[Swift.String : Any], CoverySDK.SDKError>) -> Swift.Void
+public typealias CoveryCameraCompletion = (_ error: CoverySDK.SDKError) -> Swift.Void
+public typealias CoveryEmptyCompletion = () -> Swift.Void
+public enum RootCameraViewControllerType {
+  case kyc
+  public static func == (a: CoverySDK.RootCameraViewControllerType, b: CoverySDK.RootCameraViewControllerType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension CoverySDK.SDKCovery {
+  @_hasMissingDesignatedInitializers final public class KYC {
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func startKYCSelfie(completion: @escaping (_ error: (any Swift.Error)?) -> Swift.Void)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func startKYCDocument(documentId: Swift.Int, documentType: Swift.String, documentName: Swift.String?, completion: @escaping (_ error: (any Swift.Error)?) -> Swift.Void)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func fetchDocumentList(completion: @escaping (Swift.Result<[[Swift.String : Any]], CoverySDK.SDKError>) -> Swift.Void)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func forceResetKYCData(completion: @escaping (_ error: CoverySDK.SDKError?) -> Swift.Void)
+    #endif
+    @objc deinit
+  }
+}
+@_hasMissingDesignatedInitializers final public class SDKCovery {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func configure(config: CoverySDK.SDKConfiguration?) throws
+  #endif
+  @objc deinit
+}
+public enum KYCStepType : Swift.Equatable {
+  case selfie
+  case document(documentId: Swift.Int)
+  public static func == (lhs: CoverySDK.KYCStepType, rhs: CoverySDK.KYCStepType) -> Swift.Bool
+}
+final public class SDKConfiguration {
+  public enum ButtonsBarAxis : Swift.String, Swift.Codable {
+    case horizontal
+    case vertical
+    #if compiler(>=5.3) && $NonescapableTypes
+    public init?(rawValue: Swift.String)
+    #endif
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public struct TextConfigurationItem : Swift.Codable {
+    #if compiler(>=5.3) && $NonescapableTypes
+    public init(fontName: Swift.String? = nil, fontSize: CoreFoundation.CGFloat? = nil)
+    #endif
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  public struct ButtonConfigurationItem : Swift.Codable {
+    public enum ButtonType : Swift.String, Swift.Codable {
+      case flat
+      case bordered
+      #if compiler(>=5.3) && $NonescapableTypes
+      public init?(rawValue: Swift.String)
+      #endif
+      public typealias RawValue = Swift.String
+      public var rawValue: Swift.String {
+        get
+      }
+    }
+    #if compiler(>=5.3) && $NonescapableTypes
+    public init(showsIcon: Swift.Bool? = nil, buttonType: CoverySDK.SDKConfiguration.ButtonConfigurationItem.ButtonType? = nil, buttonBorderCornerRadius: CoreFoundation.CGFloat? = nil, borderWidth: CoreFoundation.CGFloat? = nil)
+    #endif
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  public struct ButtonsBarConfiguration : Swift.Codable {
+    public enum ButtonOrder : Swift.String, Swift.Codable {
+      case accept
+      case retake
+      #if compiler(>=5.3) && $NonescapableTypes
+      public init?(rawValue: Swift.String)
+      #endif
+      public typealias RawValue = Swift.String
+      public var rawValue: Swift.String {
+        get
+      }
+    }
+    #if compiler(>=5.3) && $NonescapableTypes
+    public init(layoutAxis: CoverySDK.SDKConfiguration.ButtonsBarAxis? = nil, buttonOrder: CoverySDK.SDKConfiguration.ButtonsBarConfiguration.ButtonOrder? = nil, retakeButton: CoverySDK.SDKConfiguration.ButtonConfigurationItem? = nil, acceptButton: CoverySDK.SDKConfiguration.ButtonConfigurationItem? = nil, titleFont: CoverySDK.SDKConfiguration.TextConfigurationItem? = nil, bodyFont: CoverySDK.SDKConfiguration.TextConfigurationItem? = nil)
+    #endif
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(buttonBarConfiguration: CoverySDK.SDKConfiguration.ButtonsBarConfiguration? = nil, localizationTableName: Swift.String? = nil)
+  #endif
+  @objc deinit
+}
+extension CoverySDK.SDKCovery {
+  @_hasMissingDesignatedInitializers final public class UIController {
+    public static func showKYC(parentController: UIKit.UIViewController, cancelCompletion: @escaping CoverySDK.CoveryEmptyCompletion, serverCompletion: @escaping CoverySDK.CoveryServerCompletion, cameraCompletion: @escaping CoverySDK.CoveryCameraCompletion)
+    @objc deinit
+  }
+}
+public enum CoveryEnvironment {
+  case production
+  public static func == (a: CoverySDK.CoveryEnvironment, b: CoverySDK.CoveryEnvironment) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension SwiftUICore.View {
+  @_Concurrency.MainActor @preconcurrency public func showCoveryKYC(showingController: SwiftUICore.Binding<Swift.Bool>, cancelCompletion: @escaping CoverySDK.CoveryEmptyCompletion, serverCompletion: @escaping CoverySDK.CoveryServerCompletion, cameraCompletion: @escaping CoverySDK.CoveryCameraCompletion) -> some SwiftUICore.View
+  
+}
+extension CoverySDK.SDKCovery {
+  @_hasMissingDesignatedInitializers final public class Authorization {
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func updateToken(_ token: Swift.String, completion: @escaping (_ error: (any Swift.Error)?) -> Swift.Void)
+    #endif
+    @objc deinit
+  }
+}
+extension CoverySDK.SDKError : Swift.Equatable {}
+extension CoverySDK.SDKError : Swift.Hashable {}
+extension CoverySDK.RootCameraViewControllerType : Swift.Equatable {}
+extension CoverySDK.RootCameraViewControllerType : Swift.Hashable {}
+extension CoverySDK.SDKConfiguration.ButtonsBarAxis : Swift.Equatable {}
+extension CoverySDK.SDKConfiguration.ButtonsBarAxis : Swift.Hashable {}
+extension CoverySDK.SDKConfiguration.ButtonsBarAxis : Swift.RawRepresentable {}
+extension CoverySDK.SDKConfiguration.ButtonConfigurationItem.ButtonType : Swift.Equatable {}
+extension CoverySDK.SDKConfiguration.ButtonConfigurationItem.ButtonType : Swift.Hashable {}
+extension CoverySDK.SDKConfiguration.ButtonConfigurationItem.ButtonType : Swift.RawRepresentable {}
+extension CoverySDK.SDKConfiguration.ButtonsBarConfiguration.ButtonOrder : Swift.Equatable {}
+extension CoverySDK.SDKConfiguration.ButtonsBarConfiguration.ButtonOrder : Swift.Hashable {}
+extension CoverySDK.SDKConfiguration.ButtonsBarConfiguration.ButtonOrder : Swift.RawRepresentable {}
+extension CoverySDK.CoveryEnvironment : Swift.Equatable {}
+extension CoverySDK.CoveryEnvironment : Swift.Hashable {}

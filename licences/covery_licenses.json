@@ -1,0 +1,116 @@
+{
+    "dependencies":
+    [
+        {
+            "name": "CocoaLumberjack",
+            "project_url": "https://github.com/CocoaLumberjack",
+            "license_name": "3-clause BSD License",
+            "copyright_notice": "Copyright (c) 2010-2025, Deusty, LLC",
+            "changed_source_code": false,
+            "source_code_changes": null
+        },
+        {
+            "name": "SVGKit",
+            "project_url": "https://github.com/SVGKit",
+            "license_name": "SVGKit License",
+            "copyright_notice": "Copyright (c) 2010-2011 Matt Rajca, 2011-2025 various authors\nParts Copyright (c) Tipbit Inc",
+            "changed_source_code": false,
+            "source_code_changes": null
+        },
+        {
+            "name": "Alamofire",
+            "project_url": "https://github.com/Alamofire",
+            "license_name": "MIT",
+            "copyright_notice": "Copyright (c) 2014-2022 Alamofire Software Foundation (http://alamofire.org/)",
+            "changed_source_code": false,
+            "source_code_changes": null
+        },
+        {
+            "name": "GoogleMLKit",
+            "project_url": "",
+            "license_name": "Apache License v2",
+            "copyright_notice": "Copyright (c) 2020-2025 Google LLC",
+            "changed_source_code": false,
+            "source_code_changes": null
+        },
+        {
+            "name": "TensorFlowLiteSwift",
+            "project_url": "",
+            "license_name": "Apache License v2",
+            "copyright_notice": "Copyright (c) 2020-2025 Google LLC",
+            "changed_source_code": false,
+            "source_code_changes": null
+        },
+        {
+            "name": "SwiftyJSON",
+            "project_url": "https://github.com/SwiftyJSON",
+            "license_name": "MIT",
+            "copyright_notice": "Copyright (c) 2017 Ruoyu Fu",
+            "changed_source_code": false,
+            "source_code_changes": null
+        },
+        {
+            "name": "Swinject",
+            "project_url": "https://github.com/Swinject",
+            "license_name": "MIT",
+            "copyright_notice": "Copyright (c) 2015 Swinject Contributors",
+            "changed_source_code": false,
+            "source_code_changes": null
+        },
+        {
+            "name": "nanopb",
+            "project_url": "https://github.com/nanopb",
+            "license_name": "Zlib License",
+            "copyright_notice": "Copyright (c) 2011 Petteri Aimonen <jpa at nanopb.mail.kapsi.fi>",
+            "changed_source_code": false,
+            "source_code_changes": null
+        },
+        {
+            "name": "JWTDecode",
+            "project_url": "https://github.com/auth0",
+            "license_name": "MIT",
+            "copyright_notice": "Copyright (c) 2022 Auth0, Inc. <support@auth0.com> (http://auth0.com)",
+            "changed_source_code": false,
+            "source_code_changes": null
+        },
+        {
+            "name": "opencv",
+            "project_url": "https://github.com/yeatse",
+            "license_name": "Apache License v2",
+            "copyright_notice": "",
+            "changed_source_code": false,
+            "source_code_changes": null
+        },
+        {
+            "name": "KeychainAccess",
+            "project_url": "https://github.com/kishikawakatsumi/KeychainAccess.git",
+            "license_name": "MIT",
+            "copyright_notice": "Copyright (c) 2014 kishikawa katsumi",
+            "changed_source_code": false,
+            "source_code_changes": null
+        }
+    ],
+    "licenses":
+    [
+        {
+            "name": "MIT",
+            "file": "covery_licenses_mit.txt"
+        },
+        {
+            "name": "3-clause BSD License",
+            "file": "covery_licenses_3_clause_bsd.txt"
+        },
+        {
+            "name": "Apache License v2",
+            "file": "covery_licenses_2_clause.txt"
+        },
+        {
+            "name": "SVGKit License",
+            "file": "covery_licenses_svgkit.txt"
+        },
+        {
+            "name": "Zlib License",
+            "file": "covery_licenses_zlib.txt"
+        }
+    ]
+}
